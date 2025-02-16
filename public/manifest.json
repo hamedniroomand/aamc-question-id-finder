@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "AAMC Question ID Finder",
+    "version": "1.0.0",
+    "description": "A Chrome extension that allows you to find the question ID of a question on the AAMC website",
+    "permissions": [],
+    "icons": {
+        "180": "img/icon180.png"
+    },
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.mcatofficialprep.org/app/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
